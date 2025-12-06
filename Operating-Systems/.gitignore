@@ -1,0 +1,26 @@
+# Build directories
+bin/
+obj/
+publish/
+TestResults/
+.nuget/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+
+# Auto-generated files
+*.Designer.cs
+
+# Packages
+packages/
+*.nupkg
