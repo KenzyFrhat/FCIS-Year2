@@ -60,31 +60,31 @@ Matrix operations • Gaussian elimination • Computational tools
 Digital logic • CPU cycle • Control unit • Assembly basics
 
 ---
+## 📁 Repository Structure
 
-📁 Repository Structure
-FCIS-Year2/
+   FCIS-Year2/
+├── 📘 Operating-Systems/
+│ ├── 📂 Projects/
+│ │ └── 🏦 BankAccountSimulation/ # Multithreading banking simulation (C#)
+│ └── 📄 README.md
 │
-├── Operating-Systems/
-│   └── Projects/
-│       └── BankAccountSimulation/     # Multithreading project (C#)
+├── 📗 Data-Structures/
+│ ├── 📂 Projects/
+│ │ └── 📦 ... # C++ assignments, Linked Lists, Trees, Graphs
 │
-├── Data-Structures/
-│   └── Projects/
-│       └── ... 
+├── 🌐 Web/
+│ ├── 📂 Projects/
+│ │ └── 💻 ... # HTML / CSS / JS tasks & mini projects
 │
-├── Web/
-│   └── Projects/
-│       └── ...                        # HTML/CSS/JS tasks and labs
+├── 🧮 Linear-Algebra/
+│ ├── 📂 Projects/
+│ │ └── 🔢 LinearAlgebraApp-PythonOnly/ # PyQt6 desktop app (REF, RREF, Inverse)
 │
-├── Linear-Algebra/
-│   └── Projects/
-│       └── LinearAlgebraApp-PythonOnly 
+├── 🖥️ Computer-Organization/
+│ ├── 📂 Projects/
+│ │ └── 🧩 ... # Assembly, CPU cycle simulation, logic circuits
 │
-├── Computer-Organization/
-│   └── Projects/
-│       └── ...                        # Assembly, CPU simulation, logic circuits
-│
-└── README.md                           # This 
+└── 📄 README.md # This file
 
 ---
 
