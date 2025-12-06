@@ -1,0 +1,188 @@
+This project is a multithreaded banking system simulation implemented in C#.
+Multiple clients (threads) simultaneously perform deposit and withdraw operations on a shared BankAccount object.
+
+The main purpose of this project is to demonstrate:
+
+Multithreading
+
+Synchronization
+
+Race Condition Prevention
+
+Critical Section Management
+
+Real-world timing simulation using random delays
+
+🧠 Core Concepts
+
+Shared Resources
+
+Preemption and Interleaving
+
+Thread Scheduling
+
+lock Statement (Monitor-based synchronization)
+
+Thread-safe access to shared data
+
+Randomized simulation timing
+
+Avoiding data corruption under concurrency
+
+🏗️ Project Structure
+BankAccountSimulation/
+│
+├── Program.cs          # Creates and manages threads
+├── BankAccount.cs      # Shared resource with synchronized operations
+└── Client.cs           # Represents each client (thread behavior)
+
+🏦 BankAccount Class
+
+The BankAccount class represents a shared financial account accessed by multiple threads.
+
+Responsibilities:
+
+Deposit money (Deposit)
+
+Withdraw money (Withdraw)
+
+Prevent inconsistent states using lock
+
+Provide safe read-only access to the current balance
+
+public int Balance
+{
+    get
+    {
+        lock (locker)
+        {
+            return balance;
+        }
+    }
+}
+
+
+This ensures thread-safe access to the balance.
+
+👤 Client Class
+
+Each client represents a separate thread interacting with the shared bank account.
+
+Behavior:
+
+Performs 10 randomized operations (deposit/withdraw)
+
+Uses Random to generate different actions
+
+Uses Thread.Sleep with random delays to simulate real-world timing
+
+Logs every operation with:
+
+Client ID
+
+Operation type
+
+Amount
+
+Updated balance
+
+Example log:
+
+[Client 7] Withdrew 126. New balance = 499317
+
+🧵 Program.cs — Thread Orchestrator
+
+The Main method:
+
+Takes user input:
+
+Initial account balance
+
+Number of clients (threads)
+
+Creates a shared BankAccount instance
+
+Creates a thread for each client
+
+Starts all threads concurrently
+
+Waits for all threads using .Join()
+
+Prints the final balance
+
+📊 Example Output
+Enter initial balance: 500000
+Enter number of clients (threads): 20
+
+[Client 10] Deposited 113. Balance = 499547
+[Client 9] Withdrew 110. New balance = 499434
+...
+All clients have completed their transactions.
+Final Balance = 499276
+
+
+Each run produces different output due to randomness and unpredictable thread interleaving — which is exactly what multithreading looks like in real systems.
+
+🔒 Why Synchronization Matters
+
+Without synchronization:
+
+Multiple threads could modify the balance simultaneously
+
+This leads to race conditions
+
+Final balance becomes incorrect or corrupted
+
+Withdraw operations may allow negative balances
+
+Using:
+
+lock (locker)
+
+
+ensures:
+
+Only one thread enters the critical section at a time
+
+Updates to the shared balance are consistent
+
+No race conditions occur
+
+Thread safety guaranteed
+
+🚀 How to Run
+Build:
+dotnet build
+
+Run:
+dotnet run
+
+🛠️ Technologies Used
+
+C# (.NET 6)
+
+System.Threading
+
+Multithreading & Synchronization
+
+Console-based simulation
+
+💡 Possible Enhancements
+
+Add UI or dashboard
+
+Export logs to CSV
+
+Add multiple accounts per client
+
+Implement Mutex/Semaphore for comparison
+
+Add transaction history
+
+Visualize timeline (Gantt chart-like)
+
+👩‍💻 Author
+
+Kenzy Farhat
+Faculty of Computer & Information Sciences — OS
+2025
