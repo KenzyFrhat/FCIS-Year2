@@ -60,31 +60,33 @@ Matrix operations • Gaussian elimination • Computational tools
 Digital logic • CPU cycle • Control unit • Assembly basics
 
 ---
-## 📁 Repository Structure
 
-   FCIS-Year2/
+# 📁 **Repository Structure**
+
+```plaintext
+FCIS-Year2/
 ├── 📘 Operating-Systems/
-│ ├── 📂 Projects/
-│ │ └── 🏦 BankAccountSimulation/ # Multithreading banking simulation (C#)
-│ └── 📄 README.md
+│   ├── 📂 Projects/
+│   │   └── 🏦 BankAccountSimulation/      # Multithreading banking simulation (C#)
+│   └── 📄 README.md
 │
 ├── 📗 Data-Structures/
-│ ├── 📂 Projects/
-│ │ └── 📦 ... # C++ assignments, Linked Lists, Trees, Graphs
+│   ├── 📂 Projects/
+│   │   └── 📦 ...                         # Assignments, Linked Lists, Trees, Graphs
 │
 ├── 🌐 Web/
-│ ├── 📂 Projects/
-│ │ └── 💻 ... # HTML / CSS / JS tasks & mini projects
+│   ├── 📂 Projects/
+│   │   └── 💻 ...                         # HTML / CSS / JS tasks & mini projects
 │
 ├── 🧮 Linear-Algebra/
-│ ├── 📂 Projects/
-│ │ └── 🔢 LinearAlgebraApp-PythonOnly/ # PyQt6 desktop app (REF, RREF, Inverse)
+│   ├── 📂 Projects/
+│   │   └── 🔢 LinearAlgebraApp-PythonOnly/  # PyQt6 desktop app (REF, RREF, Inverse)
 │
 ├── 🖥️ Computer-Organization/
-│ ├── 📂 Projects/
-│ │ └── 🧩 ... # Assembly, CPU cycle simulation, logic circuits
+│   ├── 📂 Projects/
+│   │   └── 🧩 ...                         # Assembly, CPU cycle simulation, logic circuits
 │
-└── 📄 README.md # This file
+└── 📄 README.md                           # This file
 
 ---
 
