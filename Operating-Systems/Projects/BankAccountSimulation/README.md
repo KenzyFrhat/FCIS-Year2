@@ -1,159 +1,162 @@
+# 🏦 **BankAccountSimulation — C# Multithreading Project**
+*A real-world simulation of concurrent banking operations using threads, race condition handling, and synchronization.*
 
-🏦 BankAccountSimulation — C# Multithreading Project
+<p align="center">
+  <img src="https://img.shields.io/badge/C%23-.NET%208.0-blue?logo=csharp&logoColor=white" />
+  <img src="https://img.shields.io/badge/Threads-Multithreaded-purple" />
+  <img src="https://img.shields.io/badge/Concepts-Synchronization%20%7C%20RaceConditions-yellow" />
+  <img src="https://img.shields.io/badge/Status-Completed-success" />
+</p>
 
-A real-world simulation of concurrent banking operations using threads, race condition handling, and synchronization.
+<p align="center">
+  <b>Thread safety</b> • <b>Shared resource synchronization</b> • <b>Race condition prevention</b> • <b>Realistic concurrent simulation</b>
+</p>
 
-<p align="center"> <img src="https://img.shields.io/badge/Language-C%23-blue?logo=csharp&logoColor=white" /> <img src="https://img.shields.io/badge/.NET-8.0-purple?logo=dotnet&logoColor=white" /> <img src="https://img.shields.io/badge/Threads-Multithreaded-green" /> <img src="https://img.shields.io/badge/Status-Completed-success" /> </p> <p align="center"> <b>Thread safety</b> • <b>Shared resource synchronization</b> • <b>Race condition prevention</b> • <b>Realistic concurrent simulation</b> </p>
-🌟 Overview
+---
 
-BankAccountSimulation is a practical Operating Systems project built with C#.
-It simulates multiple clients (threads) performing deposits and withdrawals concurrently on a shared BankAccount resource.
+# 🌟 **Overview**
 
-The project demonstrates:
+**BankAccountSimulation** is a hands-on Operating Systems project built using **C# and .NET**, designed to demonstrate how multiple threads interact with a **shared resource** — a bank account.
 
-How race conditions occur
+The project simulates:
 
-How to prevent them using lock (critical sections)
+- 🔹 How **race conditions** occur  
+- 🔹 How to prevent them using **critical sections**  
+- 🔹 How **thread scheduling** leads to unpredictable behavior  
+- 🔹 How to synchronize access using `lock`  
+- 🔹 Realistic concurrent deposits & withdrawals  
 
-Thread scheduling behavior
+This makes the project an excellent visualization of *core OS concepts* such as concurrency, synchronization, and shared memory issues.
 
-Real-time balance updates
+---
 
-Randomized client operations for real-world realism
+# ✨ **Features**
 
-Perfect for understanding OS concepts like concurrency, synchronization, and shared memory problems.
-
-✨ Features
-🧵 1. Multithreaded Client Simulation
-
+### 🧵 **1. Multithreaded Client Simulation**
 Each client runs in its own thread and performs randomized operations:
 
-Deposits
+- Depositing money  
+- Withdrawing money  
+- Repeating operations with random delays  
 
-Withdrawals
+This creates true concurrent behavior.
 
-Mixed transactions
+---
 
-🔒 2. Full Synchronization
+### 🔒 **2. Full Synchronization**
+The shared `BankAccount` uses:
 
-lock ensures:
+```csharp
+lock (locker) { ... }
+```
 
-Safe updates to shared balance
+to ensure:
 
-No overlapping writes
+- Only **one thread** accesses the balance at a time  
+- No overlapping writes  
+- No corrupted or inconsistent values  
 
-No inconsistent account states
+---
 
-💸 3. Realistic Banking Behavior
+### 💸 **3. Realistic Banking Logic**
+Includes error handling for:
 
-Insufficient funds detection
+- Negative deposits  
+- Invalid withdrawals  
+- Insufficient funds  
 
-Positive amount validation
+---
 
-Random delays to mimic real user activity
+### 📊 **4. Detailed Logging**
+Each operation prints a clear log:
 
-📊 4. Detailed Logging
+```
+[Client 7] Deposited 135. Balance = 500194
+[Client 3] Withdrew 130. New balance = 500064
+```
 
-Every transaction prints:
+This visualizes true thread interleaving.
 
-[Client X] Deposited 120. Balance = 500340
-[Client Y] Withdrew 87. New balance = 500253
+---
 
+# 🗂️ **Project Structure**
 
-This visualizes thread interleaving beautifully.
-
-🗂️ Project Structure
+```
 BankAccountSimulation/
 │
-├── Program.cs          # Creates threads, starts simulation
+├── Program.cs          # Creates threads and starts simulation
 ├── BankAccount.cs      # Shared resource with synchronized methods
-└── Client.cs           # Thread workers performing operations
+└── Client.cs           # Worker threads executing random operations
+```
 
-🚀 How It Works
-1️⃣ User chooses:
+---
 
-Initial balance
+# 🚀 **How It Works**
 
-Number of clients (threads)
+1️⃣ User enters initial balance  
+2️⃣ User chooses number of clients (threads)  
+3️⃣ Each thread runs `DoWork()`  
+4️⃣ Threads perform deposits and withdrawals  
+5️⃣ Main thread waits for all threads using `Join()`  
+6️⃣ Simulation ends cleanly  
 
-2️⃣ Program creates:
+---
 
-A shared BankAccount
+# 🧪 **Sample Output**
 
-N Client objects
-
-N Threads executing DoWork()
-
-3️⃣ Each client:
-
-Randomly deposits or withdraws
-
-Prints every operation
-
-Sleeps briefly to simulate real delays
-
-4️⃣ Main thread waits for all workers using Join()
-
-Then prints final completion status.
-
-🧪 Example Output
+```
 [Client 10] Deposited 113. Balance = 499547
-[Client 6] Withdrew 76. New balance = 499356
-[Client 3] Deposited 142. Balance = 500306
-[Client 12] Withdrew 17. New balance = 498926
+[Client 9] Withdrew 110. New balance = 499434
+[Client 7] Deposited 135. Balance = 500194
 All clients have completed their transactions.
+```
 
+Shows clean synchronization with natural concurrency.
 
-Shows true multithreading behavior — interleaving, unpredictability, and correctness ensured by synchronization.
+---
 
-🛠️ Technologies Used
+# 🛠️ **Technologies Used**
 
-C#
+- **C#**
+- **.NET 8**
+- **System.Threading**
+- Critical sections (`lock`)
+- Thread lifecycle & scheduling concepts
 
-.NET 8
+---
 
-System.Threading
+# 📌 **Learning Outcomes**
 
-Thread lifecycle management
+- Understanding multithreading  
+- Identifying and preventing race conditions  
+- Synchronization techniques  
+- Safe shared-memory parallelism  
+- OS-level concurrency fundamentals  
 
-Synchronization primitives (lock)
+---
 
-Randomized workload simulation
+# 📈 **Future Enhancements**
 
-📌 Learning Outcomes
+✔ Add logging to file  
+✔ Add multiple accounts per client  
+✔ Replace `lock` with advanced primitives (Mutex, Monitor)  
+✔ Visual UI for thread operations  
+✔ Add custom scheduler simulation  
 
-This project helps students thoroughly understand:
+---
 
-Race conditions
-
-Shared resource problems
-
-Critical sections
-
-Thread scheduling
-
-Synchronization mechanisms
-
-Why multithreading is hard without proper locking
-
-🧭 Future Enhancements
-
-Add UI dashboard to visualize thread operations
-
-Support multiple accounts per client
-
-Implement mutex or Monitor instead of lock
-
-Add custom scheduler simulation
-
-Log operations to file
-
-📄 License
+# 📄 **License**
 
 MIT License.
 
-👩‍💻 Author
+---
 
-Kenzy Frhat
-Operating Systems Project — Year 2
-Faculty of Computers & Information
+# 👩‍💻 **Author**
+
+**Kenzy Frhat**  
+Faculty of Computers & Information — Year 2  
+
+---
+
+# ⭐ If this project helped you  
+Give it a ⭐ on GitHub!
