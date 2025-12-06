@@ -87,6 +87,7 @@ FCIS-Year2/
 │   │   └── 🧩 ...                         # Assembly, CPU cycle simulation, logic circuits
 │
 └── 📄 README.md                           # This file
+```
 
 ---
 
