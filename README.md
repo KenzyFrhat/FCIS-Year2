@@ -65,25 +65,25 @@ Digital logic • CPU cycle • Control unit • Assembly basics
 
 ```plaintext
 FCIS-Year2/
-├── 📘 Operating-Systems/
-│   ├── 📂 Projects/
+├──  Operating-Systems/
+│   ├──  Projects/
 │   │   └── 🏦 BankAccountSimulation/      # Multithreading banking simulation (C#)
 │   └── 📄 README.md
 │
-├── 📗 Data-Structures/
-│   ├── 📂 Projects/
+├──  Data-Structures/
+│   ├──  Projects/
 │   │   └── 📦 ...                         # Assignments, Linked Lists, Trees, Graphs
 │
-├── 🌐 Web/
-│   ├── 📂 Projects/
+├──  Web/
+│   ├──  Projects/
 │   │   └── 💻 ...                         # HTML / CSS / JS tasks & mini projects
 │
-├── 🧮 Linear-Algebra/
-│   ├── 📂 Projects/
+├──  Linear-Algebra/
+│   ├──  Projects/
 │   │   └── 🔢 LinearAlgebraApp-PythonOnly/  # PyQt6 desktop app (REF, RREF, Inverse)
 │
-├── 🖥️ Computer-Organization/
-│   ├── 📂 Projects/
+├──  Computer-Organization/
+│   ├──  Projects/
 │   │   └── 🧩 ...                         # Assembly, CPU cycle simulation, logic circuits
 │
 └── 📄 README.md                           # This file
