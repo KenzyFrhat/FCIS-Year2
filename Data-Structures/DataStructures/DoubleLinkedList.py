@@ -140,6 +140,10 @@ class DoublyLinkedList(Node):
         if(self.is_empty()):
             return 
         
+        if(self.size == 1):
+            self.delete_all
+            return
+        
         self.head.next.prev = None
         self.head = self.head.next
         self.size -= 1
@@ -147,10 +151,15 @@ class DoublyLinkedList(Node):
     def delete_last(self):
          if(self.is_empty()):
             return 
+         
+         if(self.size == 1):
+            self.delete_all
+            return
         
          self.tail.prev.next = None
          self.tail = self.tail.prev
          self.size -= 1
+
 
     def delete(self, value):
         try:
@@ -159,6 +168,7 @@ class DoublyLinkedList(Node):
             
             if(self.head.value == value):
                 self.delete_first()
+                
             if(self.tail.value == value):
                 self.delete_last()
             
