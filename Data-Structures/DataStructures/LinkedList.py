@@ -160,6 +160,56 @@ class LinkedList(Node):
         
         return "->".join(values)
     
+    def delete_all(self):
+        self.head = None
+        self.tail = None
+        self.size = 0
+
+    def delete_first(self):
+        try:
+            if(self.is_empty()):
+                raise Exception("The list is empty.")
+            self.head = self.head.next
+            self.size -= 1
+        except:
+            ...
+    
+    def delete_last(self):
+        try:
+            if(self.is_empty()):
+                raise Exception("The list is empty.")
+            if(self.size == 1):
+                self.delete_all()
+                return None
+            parent_node = self.Find_parent(self.tail.value)
+            parent_node.next = None
+            self.tail = parent_node
+            self.size -= 1
+            
+        except:
+            ...
+      
+
+    def delete(self, value):
+        try:
+            if(self.is_empty()):
+                raise Exception("The list is empty.")
+    
+            target_node = self.Find(value)
+            if(target_node == None):
+                raise Exception("Target value not found in the list.")
+            
+            if(value == self.head.value):
+                self.delete_first()
+                return None
+            
+            parent_node = self.Find_parent(value)
+            parent_node.next = target_node.next
+            self.size -= 1
+        except:
+            ...
+
+
              
 #! testing code 
 
@@ -187,8 +237,19 @@ print(ll)  # Output: Node(1)->Node(5)->Node(7)->Node(10)->Node(20)->Node(25)->No
 print(ll.is_Exist(25))  # Output: True
 print(ll.is_Exist(100))  # Output: False
 
+# testing deleting
+ll.delete_first()
+print(ll)
 
-        
+ll.delete_last()
+print(ll)
+
+ll.delete(10)
+print(ll)
+
+
+ll.delete_all()
+print(ll)
 
 
 
