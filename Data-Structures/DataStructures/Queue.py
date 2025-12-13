@@ -20,7 +20,13 @@ class Queue(LinkedList):
     def __repr__(self):
         if(self.is_empty()) :
             return "Queue is empty"
-        return repr(self.__LinkedList)
+        values = []
+        current = self.__LinkedList.head
+        while(current != None):
+           values.append(repr(current))
+           current = current.next
+        return "<-".join(values)
+    
     
     def inqueue(self, value): 
         # self._LinkedList.append(value)
@@ -59,15 +65,16 @@ print("Is Empty:", q.is_empty())  # Output: Is Empty: False
 
 
 print("-------------Looping---------------")
+
 q.inqueue(40)
 q.inqueue(80)
 q.inqueue(90)
-q.inqueue(70)
+q.inqueue(70);print(q)
 while(q.size() > 0):
     print("Dequeue:", q.dequeue())
 
 
-        
+
 
 
 
