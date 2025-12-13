@@ -118,6 +118,31 @@ class DoublyLinkedList(Node):
         except:
             ...
 
+    def insert_between(self, before_value, after_value, value):
+        try: 
+            if(self.is_empty()):
+                raise Exception("LinkedList is empty")
+            if(self.head == self.tail):
+                raise Exception("Only one value exists")
+            
+            target_before = self.find_node(before_value)
+            target_after = self.find_node(after_value)
+            if(not target_after or  not target_before):
+                raise Exception("Values are not exist")
+            
+            if(target_before.next != target_after):
+                raise Exception("Values are not contiguous")
+            
+            new_node = Node(value)
+            new_node.prev = target_before
+            new_node.next = target_after
+            target_before.next = new_node
+            target_after.prev = new_node
+
+        except:
+            ...
+
+
     def is_Exist(self, value):
         if(self.is_empty()):
             return False
@@ -168,7 +193,7 @@ class DoublyLinkedList(Node):
             
             if(self.head.value == value):
                 self.delete_first()
-                
+
             if(self.tail.value == value):
                 self.delete_last()
             
