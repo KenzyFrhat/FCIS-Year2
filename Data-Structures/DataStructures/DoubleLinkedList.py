@@ -34,7 +34,7 @@ class DoublyLinkedList(Node):
     def is_empty(self):
         return self.size == 0
         
-    def size(self):
+    def Size(self):
         return self.size
     
     
@@ -179,43 +179,49 @@ class DoublyLinkedList(Node):
 
 #! testing code 
 
-ll = DoublyLinkedList()
-ll.append(10)
-ll.append(20)
-ll.append(30)
-print(ll)  # Output: Node(10)->Node(20)->Node(30)
+# ll = DoublyLinkedList()
+# ll.append(10)
+# ll.append(20)
+# ll.append(30)
+# print(ll)  # Output: Node(10)->Node(20)->Node(30)
 
-ll.append_first(5)
-print(ll)  # Output: Node(5)->Node(10)->Node(20)->Node(30)
+# value = ll.head.value
+# ll.delete_first()
+# ll.append(value)
 
-ll.append_after(20, 25)
-print(ll)  # Output: Node(5)->Node(10)->Node(20)->Node(25)->Node(30)
+# print(ll)  # Output: Node(20)->Node(30)->Node(10)
 
-ll.append_before(10, 7)
-print(ll)  # Output: Node(5)->Node(7)->Node(10)->Node(20)->Node(25)->Node(30)
+# ll.append_first(5)
+# print(ll)  # Output: Node(5)->Node(10)->Node(20)->Node(30)
 
-ll.append_before(5, 1)
-print(ll)  # Output: Node(1)->Node(5)->Node(7)->Node(10)->Node(20)->Node(25)->Node(30)
+# ll.append_after(20, 25)
+# print(ll)  # Output: Node(5)->Node(10)->Node(20)->Node(25)->Node(30)
 
-ll.append_after(30, 35)
-print(ll)  # Output: Node(1)->Node(5)->Node(7)->Node(10)->Node(20)->Node(25)->Node(30)->Node(35)
+# ll.append_before(10, 7)
+# print(ll)  # Output: Node(5)->Node(7)->Node(10)->Node(20)->Node(25)->Node(30)
 
-print(ll.is_Exist(25))  # Output: True
-print(ll.is_Exist(100))  # Output: False
+# ll.append_before(5, 1)
+# print(ll)  # Output: Node(1)->Node(5)->Node(7)->Node(10)->Node(20)->Node(25)->Node(30)
 
-# testing deleting
-ll.delete_first()
-print(ll)
+# ll.append_after(30, 35)
+# print(ll)  # Output: Node(1)->Node(5)->Node(7)->Node(10)->Node(20)->Node(25)->Node(30)->Node(35)
 
-ll.delete_last()
-print(ll)
+# print(ll.is_Exist(25))  # Output: True
+# print(ll.is_Exist(100))  # Output: False
 
-ll.delete(10)
-print(ll)
+# # testing deleting
+# ll.delete_first()
+# print(ll)
+
+# ll.delete_last()
+# print(ll)
+
+# ll.delete(10)
+# print(ll)
 
 
-ll.delete_all()
-print(ll)
+# ll.delete_all()
+# print(ll)
 
 
 
