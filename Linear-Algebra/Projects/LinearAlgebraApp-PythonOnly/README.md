@@ -184,8 +184,7 @@ Pull requests are welcome!
 ---
 
 # 📄 **License**
-
-MIT License.
+This project is for educational purposes.
 
 ---
 
