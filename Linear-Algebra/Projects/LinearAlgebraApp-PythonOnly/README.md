@@ -4,7 +4,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/PyQt-6.6-blue?logo=qt&logoColor=white" />
-  <img src="https://img.shields.io/badge/License-MIT-green.svg" />
+  <img src="https://img.shields.io/badge/License-Educational-green.svg" />
   <img src="https://img.shields.io/badge/Status-Active-success" />
 </p>
 
