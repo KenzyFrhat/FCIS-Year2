@@ -147,7 +147,7 @@ Shows clean synchronization with natural concurrency.
 
 # 📄 **License**
 
-MIT License.
+Educational License.
 
 ---
 
